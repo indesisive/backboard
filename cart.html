@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/css/cart.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+          <h1 class="logo">Backboard</h1>
+    
+          <nav>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html#under">About</a></li>
+              <li><a href="./podcasts.html">Podcasts</a></li>
+              <li><a href="./merch.html">Merch</a></li>
+              <li><a class="active" href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main">
+        <h1>Here's your basket:</h1>
+        <div class="cartItems">
+          
+        </div>
+      </div>
+
+      <script>
+        window.onload = function() {
+          for(var i=0, len=localStorage.length; i<len; i++) {
+            var key = localStorage.key(i);
+            if (key.includes('62851380-53613830-316492-592_carted')) {
+              var val = localStorage[key];
+              var info = JSON.parse(val);
+
+              var prnt = document.querySelector('.cartItems');
+              prnt.innerHTML += `
+              <div class="item ${key.toString()}">
+            <div class="left">
+              <h2>${info.name}</h2>
+              <img src="${info.img}" alt="">
+            </div>
+
+            <div class="right">
+              <h2 class="price">${info.price}</h2>
+              <button class="buyNow" id="${key}_buyNow" onclick="remove('${key}')"><s>Remove</s></button>
+              <button class="buyNow"><s>Buy Now</s></button>
+            </div>
+          </div>
+              `;
+
+              // document.getElementById(`${key.toString()}_buyNow`).onclick = remove(document.getElementById(`${key.toString()}_buyNow`));
+            }
+          }
+        }
+
+        function remove(e) {
+          console.log(document.getElementsByClassName(`${e.toString()}`)[0]);
+          document.getElementsByClassName(`${e.toString()}`)[0].remove();
+          localStorage.removeItem(e.toString());
+        }
+      </script>
+
+</body>
+</html>

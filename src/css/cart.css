@@ -1,0 +1,60 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main > h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.title {
+    text-align: center;
+}
+
+.cartItems {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item {
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    height: max-content;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.75vmax;
+    font-size: 1.25vmax;
+}
+
+.item img {
+    /* width: 132px; */
+    height: 152px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vmax;    
+    flex-direction: column;
+}
+ 
+.buyNow {
+    width: max-content;
+    height: 5.5vmax;
+    font-size: 2vmax;
+    background-color: orangered;
+    border-radius: 5%;
+}

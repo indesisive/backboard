@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The BiB</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/css/merch.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+          <h1 class="logo">Backboard</h1>
+    
+          <nav>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html#under">About</a></li>
+              <li><a href="./podcasts.html">Podcasts</a></li>
+              <li><a class="active "href="./merch.html">Merch</a></li>
+              <li><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="cards">
+        <div class="card">
+            <h1>Kyrie Infinity<br><h4>Basketball Shoes</h4></h1>
+            <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3ae113bf-b715-498d-84a1-78dffc290ac5/kyrie-infinity-basketball-shoes-9kVzfc.png" alt="Denim Jeans" style="width:100%">
+            <p class="price">£114.95</p>
+            <p>The faster Kyrie slows down, the quicker he can speed up or change direction. His ability to control his movement keeps defenders guessing—and him in control.</p>
+            <p><button onclick="addToCart(0)">Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+            <h1>LeBron 19<br><h4>Basketball Shoes</h4></h1>
+            <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7670bf84-9a5e-4ed4-8b9b-53fb2631806d/lebron-19-basketball-shoes-WMXmZ1.png" alt="Denim Jeans" style="width:100%">
+            <p class="price">£169.95</p>
+            <p>LeBron thrives when stakes are high and the pressure's on. The LeBron 19 harnesses that energy with a locked-in fit and an updated cushioning system.</p>
+            <p><button onclick="addToCart(1)">Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+            <h1>Lakers Icon Edition 2020<br><h4>Nike NBA Swingman Jersey</h4></h1>
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/884b3cb9-1716-45d3-a7ba-289fae30a14d/lakers-icon-edition-2020-nba-swingman-jersey-HLvLQx.png" alt="Denim Jeans" style="width:100%">
+            <p class="price">£79.95</p>
+            <p>The Icon Edition jersey represents the franchise's rich heritage and iconic identity, expressed through the team's bold primary colour.</p>
+            <p><button onclick="addToCart(2)">Add to Cart</button></p>
+        </div>
+        
+        <div class="card">
+            <h1>Brooklyn Nets City Edition<br><h4>Nike Dri-FIT NBA Swingman Jersey</h4></h1>
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/104f2438-3583-4fde-894d-b4e9e9a6ddd5/brooklyn-nets-city-edition-dri-fit-nba-swingman-jersey-wtgKS0.png" alt="Denim Jeans" style="width:100%">
+            <p class="price">£94.95</p>
+            <p>Every NBA franchise has a playlist of its greatest hits—a compilation of iconic moments from the past that tell the team's definitive story.</p>
+            <p><button onclick="addToCart(3)">Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+            <h1>Nike Dri-FIT<br><h4>Men's Basketball Shorts</h4></h1>
+            <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/9f85e9a2-fcd9-4359-87f1-56e6e87738ee/dri-fit-basketball-shorts-wX8zrM.png" alt="Denim Jeans" style="width:100%">
+            <p class="price">£32.95</p>
+            <p>The Nike Dri-FIT Basketball Shorts are fundamental for your game.</p>
+            <p><button onclick="addToCart(4)">Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+            <h1>Jordan Sport Dri-FIT<br><h4>Men's Diamond Shorts</h4></h1>
+            <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7ceb2ce2-8b9a-44b2-ba07-ab48c1bbdb4d/jordan-sport-dri-fit-diamond-shorts-jfdgVn.png" alt="Denim Jeans" style="width:100%">
+            <p class="price">£39.95</p>
+            <p>Bring street style and Jordan heritage to the court. These lightweight shorts are made from breathable mesh in a classic, relaxed silhouette.</p>
+            <p><button onclick="addToCart(5)">Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+            <h1>Basketball Necklace<br><h4>Jewelry</h1>
+            <img src="https://i.etsystatic.com/22449335/r/il/fa32c6/2375192356/il_1140xN.2375192356_d86k.jpg" alt="Denim Jeans" style="width:100%">
+            <p class="price">£18.52</p>
+            <p>Basketball Necklace, Basketball Jewelry, Basketball Gift, Basketball Charm, Sports Jewelry, Basketball, Sports Necklace, Basketball Pendant, Basketball Player.</p>
+            <p><button onclick="addToCart(6)">Add to Cart</button></p>
+        </div>
+    </div>
+
+    <div class="custom-model-main">
+        <div class="custom-model-inner">        
+        <div class="close-btn">×</div>
+            <div class="custom-model-wrap">
+                <div class="pop-up-content-wrap">
+                   Content Here
+                </div>
+            </div>  
+        </div>  
+        <div class="bg-overlay"></div>
+      </div> 
+
+    <script>
+        function addToCart(item) {
+            if (item == 0) {
+                let info = {
+                    name: 'Kyrie Infinity Basketball Shoes',
+                    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3ae113bf-b715-498d-84a1-78dffc290ac5/kyrie-infinity-basketball-shoes-9kVzfc.png',
+                    price: '£114.95'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            } else if (item == 1) {
+                let info = {
+                    name: 'LeBron 19 Basketball Shoes',
+                    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7670bf84-9a5e-4ed4-8b9b-53fb2631806d/lebron-19-basketball-shoes-WMXmZ1.png',
+                    price: '£169.95'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            } else if (item == 2) {
+                let info = {
+                    name: 'Lakers Icon Edition 2020 Nike NBA Swingman Jersey',
+                    img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/884b3cb9-1716-45d3-a7ba-289fae30a14d/lakers-icon-edition-2020-nba-swingman-jersey-HLvLQx.png',
+                    price: '£79.95'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            } else if (item == 3) {
+                let info = {
+                    name: 'Brooklyn Nets City Edition Nike Dri-FIT NBA Swingman Jersey',
+                    img: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/104f2438-3583-4fde-894d-b4e9e9a6ddd5/brooklyn-nets-city-edition-dri-fit-nba-swingman-jersey-wtgKS0.png',
+                    price: '£94.95'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            } else if (item == 4) {
+                let info = {
+                    name: "Nike Dri-FIT Men's Basketball Shorts",
+                    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/9f85e9a2-fcd9-4359-87f1-56e6e87738ee/dri-fit-basketball-shorts-wX8zrM.png',
+                    price: '£32.95'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            } else if (item == 5) {
+                let info = {
+                    name: "Jordan Sport Dri-FIT Men's Diamond Shorts",
+                    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7ceb2ce2-8b9a-44b2-ba07-ab48c1bbdb4d/jordan-sport-dri-fit-diamond-shorts-jfdgVn.png',
+                    price: '£39.95'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            } else if (item == 6) {
+                let info = {
+                    name: "Basketball Necklace Jewelry",
+                    img: 'ttps://i.etsystatic.com/22449335/r/il/fa32c6/2375192356/il_1140xN.2375192356_d86k.jpg',
+                    price: '£18.52'
+                };
+
+                localStorage.setItem(`62851380-53613830-316492-592_carted_${item}`,JSON.stringify(info));
+                popup(`Your ${info.name} have been added to your basket! Click on the basket icon to see them.`);
+            }
+        }
+
+        function popup(text) {
+          document.querySelector('.custom-model-main').classList.add('model-open');
+          document.querySelector('.pop-up-content-wrap').textContent = text;
+        }
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+          document.querySelector('.custom-model-main').classList.remove('model-open');
+        })
+
+        document.querySelector('.bg-overlay').addEventListener('click', () => {
+          document.querySelector('.custom-model-main').classList.remove('model-open');
+        })
+    </script>
+
+</body>
+</html>

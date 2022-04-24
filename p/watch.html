@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcasts</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../src/css/podcasts.css">
+    <link rel="stylesheet" href="../src/css/nav.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1 class="logo">Backboard</h1>
+    
+          <nav>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../index.html#under">About</a></li>
+              <li><a href="../podcasts.html">Podcasts</a></li>
+              <li><a href="../merch.html">Merch</a></li>
+              <li><a href="../cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="podcastWrapper">
+            <iframe width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
+          </div>
+      </div>
+
+      <script>
+          window.onload = function() {
+            const params = new URLSearchParams(window. location. search);
+            if (params.has('p')) {
+                let id = params.get('p');
+                console.log(id);
+                document.querySelector('.podcastWrapper iframe').src = `https://www.youtube.com/embed/${id}`;
+            }
+          }
+      </script>
+</body>
+</html>

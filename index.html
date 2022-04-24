@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The BiB</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+
+</head>
+<body>
+
+  <marquee style="position: absolute">New Merch, Just Dropped in the <a href="./merch.html">Merch Section</a>, Head over Now!</marquee>
+    
+    <header>
+        <div class="container">
+          <h1 class="logo">Backboard</h1>
+    
+          <nav>
+            <ul>
+              <li><a class="active" href="./index.html">Home</a></li>
+              <li><a href="./index.html#under">About</a></li>
+              <li><a href="./podcasts.html">Podcasts</a></li>
+              <li><a href="./merch.html">Merch</a></li>
+              <li><a href="./cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <div class="main">
+          <div class="landing">
+
+              <div class="left">
+                <h1 class="landTitle" id="llt">The <br><span>Backboard</span></h1>
+              </div>
+
+              <div class="right">
+                <h1 class="landTitle" id="rlt">Of <br><span>Basketball</span></h1>
+                <br>
+                <a href="#under" class="explore">Explore</a>
+              </div>
+          </div>
+
+          <div class="content">
+            <h1 class="under" id="under">Everything about us is basketball. Everything.<br> The one and only place you need</h1>
+            <div class="tables">
+              <div class="west table" id="table">
+                <h2>Western Conference</h2>
+                <iframe frameborder="0"  scrolling="no" width="520" height="439" src="https://statsdream.com/basketball/usa/nba/iframe/?type=table&sport=4&country=231&template=824&conference=Western Conference&team=&timezone=Pacific/Midway&time=24&po=1&ma=1&wi=1&los=1&pts=1&ng=0&form=1&width=520&height=439&font=Arial&fs=12&lh=22&bg=ff4500&fc=ffffff&logo=1&tlink=1&ths=1&thb=1&thba=ff1000&thc=000000&bc=dddddd&hob=ff2500&hobc=ff9509&lc=ffffff&sh=1&hfb=1&hbc=ff9509&hfc=FFFFFF"></iframe><div style="text-align:center;"></div>
+              </div>
+
+              <div class="east table" id="table">
+                <h2>Eastern Conference</h2>
+                <iframe frameborder="0"  scrolling="no" width="520" height="439" src="https://statsdream.com/basketball/usa/nba/iframe/?type=table&sport=4&country=231&template=824&conference=Eastern Conference&team=&timezone=Pacific/Midway&time=24&po=1&ma=1&wi=1&los=1&pts=1&ng=0&form=1&width=520&height=439&font=Arial&fs=12&lh=22&bg=ff4500&fc=ffffff&logo=1&tlink=1&ths=1&thb=1&thba=ff1000&thc=000000&bc=dddddd&hob=ff2500&hobc=ff9509&lc=ffffff&sh=1&hfb=1&hbc=ff9509&hfc=FFFFFF"></iframe><div style="text-align:center;"></div>
+              </div>
+            </div>
+
+            <h2 class="prePerks">Of course, we are loaded with live updates on the NBA standings, great for you we also have:</h2>
+            <ul class="perks">
+              <li>Podcasts <a href="./podcasts.html">Here</a></li>
+              <li>Merch <a href="./merch.html">Here</a></li>
+              <li>Equipement (Coming Soon)</li>
+            </ul>
+          </div>
+
+          <div class="frmSubs frmDiv">
+            <form action="">
+    
+              <h2>Enter your name and email to NEVER miss an update</h2>
+              
+              <input id="first-name" type="text" required placeholder="First name" name="First-Name" class="subs subs-fn">
+              
+              <input type="text" required placeholder="Last name" name="Last-Name" class="subs">
+              
+              <input id="eml" type="email" required placeholder="email@" name="Email" class="subs subs-em">
+              
+              
+            </form>
+            <button class="subsBtn" onclick="submitPopup()">Submit</button>
+        </div>
+
+        <br><br><br>
+
+        <div class="frmDiv frmCnt">
+          <form action="">
+  
+            <h2>Contact Us</h2>
+            
+            <input id="eml" type="email" required placeholder="your.email@" name="Email" class="cnt cnt-em">
+
+            <input id="subject" type="text" required placeholder="Subject" name="Subject" class="cnt cnt-fn">
+            
+            <textarea rows="6" required placeholder="Message" name="Message"></textarea>
+            
+            <button type="reset">Reset</button>
+            
+          </form>
+          <button class="cntBtn" onclick="contactPopup()">Submit</button>
+        </div>
+      </div>
+
+      <div class='cookie-banner' style='display: none'>
+        <p>
+            By using our website, you agree to our 
+            <a href='#'>cookie policy</a>
+        </p>
+        <button class='close'>Agree and Close</button>
+      </div>
+
+      <div class="custom-model-main">
+        <div class="custom-model-inner">        
+        <div class="close-btn">×</div>
+            <div class="custom-model-wrap">
+                <div class="pop-up-content-wrap">
+                   Content Here
+                </div>
+            </div>  
+        </div>  
+        <div class="bg-overlay"></div>
+      </div> 
+
+      <script>
+
+        if (localStorage.getItem('cookieSee') != 'show') {
+            $('.cookie-banner').delay(2000).fadeIn();
+            localStorage.setItem('cookieSee','show')
+        };
+            $('.close').click(function() {
+            $('.cookie-banner').fadeOut();
+        })
+
+        $(document).ready(() => {
+          $('#llt').fadeIn(2000);
+          $('#rlt').fadeIn(2000);
+          $('.explore').fadeIn(2000);
+        })
+
+
+        function submitPopup() {
+          let isFull = false;
+          let done = false;
+          var slides = document.getElementsByClassName("subs");
+          for (var i = 0; i < slides.length; i++) {
+            const curr = slides.item(i);
+            if (curr.value.length == 0) {
+              isFull = true;
+            }
+          }
+          if (!isFull && !done) {
+            popup(`Horray, ${document.querySelector('.subs-fn').value}! You have been added to the list of members under the email ${document.querySelector('.subs-em').value}`)
+            done = true;
+          }
+        }
+
+        function contactPopup() {
+          let isFull = false;
+          let done = false;
+          var slides = document.getElementsByClassName("cnt");
+          for (var i = 0; i < slides.length; i++) {
+            const curr = slides.item(i);
+            if (curr.value.length == 0) {
+              isFull = true;
+            }
+          }
+          if (!isFull && !done) {
+            popup(`Horray, Your email has been sent to us through ${document.querySelector('.cnt-em').value}`)
+            done = true;
+          }
+        }
+
+        function popup(text) {
+          document.querySelector('.custom-model-main').classList.add('model-open');
+          document.querySelector('.pop-up-content-wrap').textContent = text;
+        }
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+          document.querySelector('.custom-model-main').classList.remove('model-open');
+        })
+
+        document.querySelector('.bg-overlay').addEventListener('click', () => {
+          document.querySelector('.custom-model-main').classList.remove('model-open');
+        })
+
+    </script>
+
+</body>
+</html>
